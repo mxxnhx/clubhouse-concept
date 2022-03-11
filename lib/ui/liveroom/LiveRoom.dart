@@ -10,80 +10,6 @@ class LiveRoom extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
-    final members = [
-      LiveRoomMember(
-        name: "Sarah",
-        isModerator: true,
-        isMuted: false,
-        imagePath: "assets/images/3.png",
-        color: MemojiColors.black,
-      ),
-      LiveRoomMember(
-        name: "Daniel",
-        isModerator: true,
-        imagePath: "assets/images/2.png",
-        color: MemojiColors.amber,
-      ),
-      LiveRoomMember(
-        name: "Samantha",
-        isModerator: true,
-        imagePath: "assets/images/4.png",
-        color: MemojiColors.white,
-      ),
-      LiveRoomMember(
-        name: "Aishat",
-        isModerator: true,
-        imagePath: "assets/images/6.png",
-        color: MemojiColors.yellow,
-      ),
-      LiveRoomMember(
-        name: "Ruth",
-        isModerator: true,
-        imagePath: "assets/images/5.png",
-        color: MemojiColors.green,
-      ),
-      LiveRoomMember(
-        name: "Rich",
-        imagePath: "assets/images/1.png",
-        color: MemojiColors.red,
-      ),
-      LiveRoomMember(
-        name: "Sarah",
-        isNewMember: true,
-        imagePath: "assets/images/7.png",
-        color: MemojiColors.blue,
-      ),
-      LiveRoomMember(
-        name: "Mercy",
-        isNewMember: true,
-        imagePath: "assets/images/8.png",
-        color: MemojiColors.white,
-      ),
-      LiveRoomMember(
-        name: "Tim",
-        isNewMember: true,
-        imagePath: "assets/images/9.png",
-        color: MemojiColors.purple,
-      ),
-      LiveRoomMember(
-        name: "Ed",
-        isNewMember: true,
-        imagePath: "assets/images/10.png",
-        color: MemojiColors.yellow,
-      ),
-      LiveRoomMember(
-        name: "John",
-        isNewMember: true,
-        imagePath: "assets/images/11.png",
-        color: MemojiColors.green,
-      ),
-      LiveRoomMember(
-        name: "Lauret",
-        isNewMember: true,
-        imagePath: "assets/images/12.png",
-        color: MemojiColors.purple,
-      ),
-    ];
     return GestureDetector(
       onTap: () => FocusScope.of(context).unfocus(),
       child: Scaffold(
@@ -102,19 +28,7 @@ class LiveRoom extends StatelessWidget {
         body: Column(
           children: [
             Expanded(
-              child: GridView.builder(
-                padding: EdgeInsets.all(10),
-                itemCount: members.length,
-                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 3,
-                  childAspectRatio: 1 / 1,
-                  mainAxisSpacing: 20,
-                  crossAxisSpacing: 14,
-                ),
-                itemBuilder: (context, index) {
-                  return members[index];
-                },
-              ),
+              child: Container(),
             ),
             Container(
               padding: EdgeInsets.fromLTRB(20, 15, 20, 20),

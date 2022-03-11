@@ -1,7 +1,5 @@
 import 'dart:math';
 
-import 'package:clubhouse/ui/home/HomeRoomItem.dart';
-import 'package:clubhouse/ui/home/HomeUpcoming.dart';
 import 'package:clubhouse/utils/DynamicColor.dart';
 import 'package:clubhouse/utils/MemojiColors.dart';
 import 'package:clubhouse/widgets/SquircleIconButton.dart';
@@ -21,40 +19,15 @@ class Home extends StatelessWidget {
       "👀 Clone",
       "⛱ Saturday",
     ];
-    final list = [
-      Text(
-        "Upcoming",
-        style: theme.textTheme.headline4,
-      ),
-      HomeUpcoming(
-        time: "10:00 - 12:00",
-        title: "Design talks and chill",
-      ),
-      Text(
-        "Happening now",
-        style: theme.textTheme.headline4,
-      ),
-      HomeRoomItem(),
-      HomeRoomItem(),
-      HomeRoomItem(),
-    ];
     return Scaffold(
+      // CHECK: Scaffold는 material design의 기본 layout 구조입니다.
       extendBody: true,
       appBar: AppBar(
         centerTitle: false,
         title: Text("Good Morning,\nLeslie"),
         actions: [
-          IconButton(
-            icon: Icon(CupertinoIcons.search),
-            onPressed: () {},
-          ),
-          SizedBox(width: 5),
-          CircleAvatar(
-            radius: 18,
-            backgroundColor: MemojiColors.blue,
-            child: Image.asset("assets/images/10.png"),
-          ),
-          SizedBox(width: 20),
+          // TODO: 1. 우측 상단에 검색 버튼을 넣어보세요.
+          // TODO: 2. 우측 상단에 프로필 이미지를 넣어보세요.
         ],
         bottom: PreferredSize(
           preferredSize: Size.fromHeight(60),
@@ -89,14 +62,7 @@ class Home extends StatelessWidget {
           ),
         ),
       ),
-      body: ListView.separated(
-        padding: EdgeInsets.fromLTRB(20, 20, 20, 200),
-        separatorBuilder: (_, __) => SizedBox(height: 10),
-        itemCount: list.length,
-        itemBuilder: (context, index) {
-          return list[index];
-        },
-      ),
+      // TODO: 3. 채팅방을 표시해보세요.
       bottomNavigationBar: DecoratedBox(
         decoration: BoxDecoration(
           gradient: LinearGradient(

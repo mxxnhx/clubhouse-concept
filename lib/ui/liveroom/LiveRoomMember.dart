@@ -22,22 +22,11 @@ class LiveRoomMember extends StatefulWidget {
   final Color? color;
 
   @override
-  _LiveRoomMemberState createState() => _LiveRoomMemberState(isMuted);
+  _LiveRoomMemberState createState() => _LiveRoomMemberState();
 }
 
 class _LiveRoomMemberState extends State<LiveRoomMember> {
-  late bool isMuted;
-
-  _LiveRoomMemberState(isMuted) {
-    this.isMuted = isMuted;
-  }
-
-  void toggleMute() {
-    setState(() {
-      isMuted = !isMuted;
-    });
-  }
-
+  // TODO: 7. 아이콘을 클릭해서 mute/unmute를 토글하세요.
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
@@ -45,9 +34,6 @@ class _LiveRoomMemberState extends State<LiveRoomMember> {
       children: [
         Expanded(
           child: GestureDetector(
-            onTap: () {
-              toggleMute();
-            },
             child: AspectRatio(
               aspectRatio: 1 / 1,
               child: Stack(
@@ -73,7 +59,7 @@ class _LiveRoomMemberState extends State<LiveRoomMember> {
                         ),
                       ),
                     ),
-                  if (isMuted)
+                  if (widget.isMuted)
                     Align(
                       alignment: Alignment.bottomRight,
                       child: CircleAvatar(

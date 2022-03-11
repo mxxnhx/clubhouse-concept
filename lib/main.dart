@@ -2,7 +2,7 @@ import 'package:clubhouse/ui/home/Home.dart';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(MyApp()); // CHECK: 처음 앱이 시작되는 곳 입니다.
 }
 
 class MyApp extends StatelessWidget {
@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       home: Home(),
-      themeMode: ThemeMode.dark,
+      themeMode: ThemeMode.dark, // CHECK: 다크 모드와 일반 모드를 전환할 수 있어요.
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         brightness: Brightness.light,

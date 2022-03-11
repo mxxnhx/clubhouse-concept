@@ -11,15 +11,7 @@ class HomeRoomItem extends StatelessWidget {
   Widget build(BuildContext context) {
     ThemeData theme = Theme.of(context);
     return GestureDetector(
-      onTap: () {
-        Navigator.push(
-          context,
-          MaterialPageRoute(
-            fullscreenDialog: true,
-            builder: (_) => LiveRoom(),
-          ),
-        );
-      },
+      // TODO: 5. 클릭해서 liveroom으로 진입하세요.
       child: Container(
         margin: EdgeInsets.only(bottom: 20),
         padding: EdgeInsets.fromLTRB(30, 24, 30, 24),
