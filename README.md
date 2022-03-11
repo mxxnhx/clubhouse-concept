@@ -1,14 +1,10 @@
-# Clubhouse Concept
+# Clubhouse Concept Clone For GDG Flutter Festival
 
-A quick flutter clone. I miss doing these 😂
-
-I'll polish the code later.
-
-## UI reference by [ZeezCrypto](https://twitter.com/ZeezCrypto)
-
-![image](https://user-images.githubusercontent.com/4087388/122645950-81a7c280-d10c-11eb-8217-68f04b2dfe10.png)
+This repo is forked from [clubhouse-concept] clone coding of flutter project for being used as hands-on lab material in GDG flutter festival.
+To learn the concept of StatefulWidget, `LiveRoom` widget is changed to StatefulWidget.
 
 
+You can start clone coding from template code in `master` branch and check the original forked code with a little change in `answer` branch.
 ## Screenshots
 <table>
   <tr>
